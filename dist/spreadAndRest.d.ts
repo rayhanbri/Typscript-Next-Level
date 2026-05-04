@@ -1,2 +1,2 @@
 export {};
-//# sourceMappingURL=spreadAndRest.d.ts.map
+//# sourceMappingURL=spreadandrest.d.ts.map

@@ -1,53 +1,35 @@
-// array , object
+//array, object
 
-// ts - tuple
+let bazarlist: string[] = ["tomato", "alu"];
 
-let bazarList: string[] = ["eggs", "milk", "sugar"];
+// bazarlist.push(12);
 
-bazarList.push(true);
+let mixedArray: (string | number)[] = ["apple", 3, "alu"];
 
-let mixedArr: (string | number)[] = ["eggs", 12, "milk", 1, "sugar", 2];
+mixedArray.push(true);
 
-mixedArr.push(true);
+// two only, touple
 
-let coordinates: [number, number] = [20, 30, 50];
+let coordinates: [number, number] = [1, 2, 2];
 
-let couple: [string, string] = ["Husband", "wife"];
+let couple: [string, number] = ["rayhan", 12];
 
-let destination: [string, string, number] = ["Dhaka", "Chattogram", 3];
-
-// reference type : object
-
-// const user: {
-//   organization: "Programming Hero";// value => type : literal types
-//   firstName: string;
-//   middleName?: string; // optional type
-//   lastName: string;
-//   isMarried: boolean;
-// } = {
-//   organization: "Programming Hero",
-//   firstName: "Jhankar",
-//   lastName: "Mahbub",
-//   isMarried: true,
-// };
-
-// user.organization = "Programming Hero Fire";
+//object types
+//literal types 
+//access modified 
+//optional type 
 
 const user: {
-  readonly organization: string; // access modifier
-  firstName: string;
-  middleName?: string; // optional type
+  Organization: "Programming Hero";  //literal type 
+  readonly salary : number;   //access modifier 
+  fristName: string;
+  middlenName?: string; //optional type
   lastName: string;
-  isMarried: boolean;
 } = {
-  organization: "Programming Hero",
-  firstName: "Jhankar",
-  lastName: "Mahbub",
-  isMarried: true,
+  fristName: "Rayhan",
+  lastName: "bro ",
+  Organization,
+  salary:12
 };
 
-user.organization = "Programming Hero Fire";
-
-console.log(user);
-
-console.log(user);
+user. 

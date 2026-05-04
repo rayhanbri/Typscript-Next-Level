@@ -1,22 +1,28 @@
 "use strict";
-// Function
-// arow function , normal function
+//arrow function , normal function
 Object.defineProperty(exports, "__esModule", { value: true });
-function addNormal(num1, num2) {
+function add(num1, num2) {
+    //rturn type
     return num1 + num2;
 }
-const addArrow = (num1, num2) => num1 + num2;
-addArrow(2, 2);
-//object => function => method
+add(2, 3);
+// Arrow Function
+const addArrow = (num1, numb2) => num1 + numb2;
+addArrow(1, 2);
+// Object function Method
 const poorUser = {
-    name: "mezba",
+    name: "rayhan",
     balance: 0,
+    //   addBalance(value: number) {
+    //     return this.balance + value;
+    //   },
     addBalance(value) {
         const totalBalance = this.balance + value;
         return totalBalance;
     },
 };
-poorUser.addBalance(100000);
-const arr = [1, 4, 6];
-const sqrArray = arr.map((elem) => elem * elem);
+poorUser.addBalance(1000);
+// call back function
+const arr = [1, 3, 2];
+const sqrArray = arr.map((element) => element * element);
 //# sourceMappingURL=function.js.map

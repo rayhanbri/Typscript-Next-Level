@@ -7,16 +7,22 @@ const user = {
     name: {
         firstName: "Mezbaul",
         middleName: "Abedin",
-        lastName: "Forhan",
+        lastName: "forhan",
     },
     gender: "male",
-    favouriteColor: "black",
+    favouritecolor: "black",
 };
-//const myFavouriteColor = user.favouriteColor
-//const myMiddleName = user.name.middleName
-const { favouriteColor, name: { middleName: myMiddleName }, } = user;
-//console.log(myMiddleName);
-const friends = ["karim", "Rahim", "Mahim"];
-const [, , myBestFriend] = friends;
-console.log(myBestFriend);
+// const myfavourtieColor = user.favouritecolor
+// destructuring
+// const { favouriteColor } = user;
+// name alias
+// const { favouriteColor: myfavouritecolor } = user;
+// const {
+//   favouriteColor: myfavouritecolor,
+//   name: { middleName: mymiddleName },
+// } = user;
+const friends = ["karim", "Rahim", "Mahin"];
+const BestFriend = friends[1];
+// const [, B] = friends;
+const [, , B] = friends;
 //# sourceMappingURL=destructuring.js.map

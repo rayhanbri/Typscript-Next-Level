@@ -1,17 +1,14 @@
-// spread operator
+//spread operator
 
-const friends = ["Rahim", "Karim"];
+const friends = ["rayhim", "shamim"];
 
-const schoolFriends = ["pintu", "chintu", "bulbul"];
+const schoolFriends = ["akash", "arman"];
 
-const collegeFriends = ["Mr. Smart", "Mr very very smart"];
+const colleageFriends = ["rocky", "socky"];
 
-// const friends = ["Rahim", "Karim", ["pintu", "chintu", "bulbul"]];
+// friends.push(schoolFriends)
 
 friends.push(...schoolFriends);
-friends.push(...collegeFriends);
-
-console.log(friends);
 
 const user = { name: "Mezba", phoneNo: "0170000000" };
 
@@ -25,7 +22,7 @@ console.log(userInfo);
 
 const sendInvite = (...friends: string[]) => {
   friends.forEach((friend: string) =>
-    console.log(`Send invitation to ${friend}`)
+    console.log(`Send invitation to ${friend}`),
   );
 };
 

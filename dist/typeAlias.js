@@ -13,20 +13,10 @@ const user1 = {
         city: "Chattogram",
     },
 };
-const user2 = {
+const user = {
     id: 123,
-    name: {
-        firstName: "Mr.",
-        lastName: "Y",
-    },
-    gender: "female",
-    contactNo: "01999",
-    address: {
-        division: "Dhaka",
-        city: "Dhaka",
-    },
+    name: "rayhan",
 };
-const isAdmin = true;
-const myName = "Me. X";
+const myName = "rayhan";
 const add = (num1, num2) => num1 + num2;
 //# sourceMappingURL=typeAlias.js.map

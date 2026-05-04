@@ -1,27 +1,39 @@
-// Function
-// arow function , normal function
+//arrow function , normal function
 
-function addNormal(num1: number, num2: number): number {
+function add(num1: number, num2: number): number {
+  //rturn type
   return num1 + num2;
 }
 
-const addArrow = (num1: number, num2: number): number => num1 + num2;
+add(2, 3);
 
-addArrow(2, 2);
+// Arrow Function
 
-//object => function => method
+const addArrow = (num1: number, numb2: number) => num1 + numb2;
+
+addArrow(1, 2);
+
+// Object function Method
 
 const poorUser = {
-  name: "mezba",
+  name: "rayhan",
   balance: 0,
+  //   addBalance(value: number) {
+  //     return this.balance + value;
+  //   },
+
   addBalance(value: number): number {
+    // what it this
     const totalBalance = this.balance + value;
     return totalBalance;
   },
 };
 
-poorUser.addBalance(100000);
+poorUser.addBalance(1000);
 
-const arr: number[] = [1, 4, 6];
+// call back function
+//what is callbackfunction
 
-const sqrArray = arr.map((elem: number): number => elem * elem);
+const arr: number[] = [1, 3, 2];
+
+const sqrArray = arr.map((element: number): number => element * element);

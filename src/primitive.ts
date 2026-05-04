@@ -1,16 +1,7 @@
-// JS - TS
-// string, number, boolean, undefined, null
+let userName: string = "Rayhan";
 
-// TS: never, unknown, void
-
-let userName: string = "mezba123";
-
-let userId = 123;
-
-userName.toFixed();
-userId.toFixed;
+// userName = 12;
 
 let isAdmin: boolean = false;
-isAdmin = true;
 
-let x: undefined = undefined;
+// all data types of typescript

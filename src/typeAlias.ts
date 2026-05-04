@@ -1,4 +1,4 @@
-type User = {
+const user1: {
   id: number;
   name: {
     firstName: string;
@@ -10,9 +10,7 @@ type User = {
     division: string;
     city: string;
   };
-};
-
-const user1: User = {
+} = {
   id: 123,
   name: {
     firstName: "Mr.",
@@ -26,26 +24,21 @@ const user1: User = {
   },
 };
 
-const user2: User = {
-  id: 123,
-  name: {
-    firstName: "Mr.",
-    lastName: "Y",
-  },
-  gender: "female",
-  contactNo: "01999",
-  address: {
-    division: "Dhaka",
-    city: "Dhaka",
-  },
+// type alias
+
+type User = {
+  id: number;
+  name: string;
 };
 
-type IsAdmin = true;
-const isAdmin: IsAdmin = true;
+const user: User = {
+  id: 123,
+  name: "rayhan",
+};
 
 type Name = string;
 
-const myName: Name = "Me. X";
+const myName: Name = "rayhan";
 
 // function
 

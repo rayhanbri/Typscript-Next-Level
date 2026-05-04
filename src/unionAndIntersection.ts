@@ -1,38 +1,37 @@
-// union |
+//union types
 
-type UserRole = "admin" | "user";
+type UserRole = "admin" | "user" | "guest";
 
-const getDashboard = (role: UserRole) => {
+const getDashboarad = (role: UserRole) => {
   if (role === "admin") {
-    return "Admin Dashboard";
+    return "Admin dashboard";
   } else if (role === "user") {
-    return "User dashboard";
+    return "user dashboard";
   } else {
-    return "guest dashboard";
+    return "guest dasboard v ";
   }
 };
 
-getDashboard("guest");
-
-// intersection &
+//intersection &
 
 type Employee = {
   id: string;
   name: string;
-  phoneNo: string;
+  phoneNO: string;
 };
 
 type Manager = {
-  designation: string;
+  description: string;
   teamSize: number;
 };
 
 type EmployeeManager = Employee & Manager;
 
-const ChowdhuryShaheb: EmployeeManager = {
+const chowdhury: EmployeeManager = {
+  name: "rayhan",
   id: "123",
-  name: "Chowdhury Shaheb",
-  phoneNo: "017",
-  designation: "manager",
-  teamSize: 20,
+  phoneNO: "012",
+  description: "heelo",
+  teamSize:2
+
 };

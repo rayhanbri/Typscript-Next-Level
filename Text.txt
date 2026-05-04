@@ -1,0 +1,51 @@
+1.what is typscript and why we use it. 
+
+2. Node Version Manager Install package 
+3.why we use nvm 
+4.
+
+How to install it nvm - 
+1.uninstall node.js app 
+2.go to node.js and download nvm download
+3. install nvm 
+4.nvm install 24.11.0 (nvm all command )
+5.nvm ls 
+6.nvm user version name
+7.node -v 
+
+
+----------
+1.read typscript node.js typscirpt 
+
+install typscript ---
+1.npm install typscirpt
+2.tsc -v
+3.tsc text.ts 
+4.tsc --init (config file )
+5.root dir 
+6.create source folder
+7. tsc 
+-----------------------
+console :- node ./src/Nonprimitive.
+
+
+Primitive.ts 
+1.primitive and non-primitive data type  javascript and typscript . 
+
+Nonprimitive.ts
+
+
+
+function.ts
+
+spread and rest.ts 
+
+destructuring 
+
+typeAlias
+
+union types 
+
+question mark.ts 
+
+nullibable 

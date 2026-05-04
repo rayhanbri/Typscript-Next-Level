@@ -1,23 +1,22 @@
 "use strict";
-// union |
+//union types
 Object.defineProperty(exports, "__esModule", { value: true });
-const getDashboard = (role) => {
+const getDashboarad = (role) => {
     if (role === "admin") {
-        return "Admin Dashboard";
+        return "Admin dashboard";
     }
     else if (role === "user") {
-        return "User dashboard";
+        return "user dashboard";
     }
     else {
-        return "guest dashboard";
+        return "guest dasboard v ";
     }
 };
-getDashboard("guest");
-const ChowdhuryShaheb = {
+const chowdhury = {
+    name: "rayhan",
     id: "123",
-    name: "Chowdhury Shaheb",
-    phoneNo: "017",
-    designation: "manager",
-    teamSize: 20,
+    phoneNO: "012",
+    description: "heelo",
+    teamSize: 2
 };
 //# sourceMappingURL=unionAndIntersection.js.map
