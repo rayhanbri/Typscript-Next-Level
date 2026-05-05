@@ -30,5 +30,11 @@ const student3 = {
   class: "1",
 };
 
-const result = addStudentToCourse(student3);
+const result = addStudentToCourse(student2);
 console.log(result);
+
+type bro = { isGood: boolean; name: string; role: number };
+
+const myBro = <T extends bro>(bro: T) => bro;
+
+myBro({ isGood: true, name: "rayhan", role: 1 });

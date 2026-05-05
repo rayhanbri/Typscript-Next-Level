@@ -1,8 +1,16 @@
 //dynamically generalize: Generic
+//what is generics
 
 type GenericArray<T> = Array<T>;
 
+// type GenericArray = Array<number>;
+
 // const friends: string[] = ["Mr. X", "Mr. Y", "Mr. Z"];
+
+// amra array use korle ki somossa
+
+// const friends: Array<string> = ["Mr. X", "Mr. Y", "Mr. Z"];
+
 const friends: GenericArray<string> = ["Mr. X", "Mr. Y", "Mr. Z"];
 
 //const rollNumbers: number[] = [4, 7, 11];
@@ -24,11 +32,13 @@ const userList: GenericArray<User> = [
   },
 ];
 
-const sqrFunc = (value: number) => {
+const sqrFunc = (value: number): number => {
   return value * value;
 };
 
 sqrFunc(4);
+
+// generics for tuple
 
 type Coordinates<X, Y> = [X, Y];
 

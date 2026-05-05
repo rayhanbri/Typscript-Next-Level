@@ -1,8 +1,11 @@
 // enum
 
+
 // set of fixed string leteral ek jaigai rakhe
 
 // type UserRoles = "Admin" | "Editor" | "Viewer";
+
+//enum is not recommended for enum.js
 
 enum UserRoles {
   Admin = "Admin",
@@ -18,3 +21,6 @@ const canEdit = (role: UserRoles) => {
 
 const isEditPermissable = canEdit(UserRoles.Admin);
 console.log(isEditPermissable);
+
+// for run this code
+// node --experimental-transform-types ./src/enum.ts

@@ -1,5 +1,7 @@
 // as const assertion
 
+//9 number video
+
 // enum UserRoles {
 //   Admin = "Admin",
 //   Editor = "Editor",
@@ -64,3 +66,5 @@ const canEdit = (role: (typeof UserRoles)[keyof typeof UserRoles]) => {
 
 const isEditPermissable = canEdit(UserRoles.Admin);
 console.log(isEditPermissable);
+
+

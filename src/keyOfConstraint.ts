@@ -6,10 +6,14 @@ type RichPeoplesVehicle = {
   cng: string;
 };
 
+// union type and string literal type
+
 type MyVehicle1 = "bike" | "car" | "cng";
 type Myvehicle2 = keyof RichPeoplesVehicle;
 
 const myVehicle: Myvehicle2 = "ship";
+
+// key of constraints
 
 type User = {
   id: number;

@@ -4,6 +4,7 @@ type User = {
 };
 
 // interface : object type: array, object , function
+//difference between type alias and type interface
 
 interface IUser {
   name: string;
@@ -14,7 +15,11 @@ type Role = {
   role: "admin" | "user";
 };
 
+// Intersection
+
 type UserWithRole = User & Role;
+
+// like intersection
 
 interface IUserWithRole extends IUser {
   role: "admin" | "user";
@@ -47,8 +52,25 @@ const add: IAdd = (num1, num2) => num1 + num2;
 
 type Friends = string[];
 
+// index signature
+
 interface IFriends {
   [index: number]: string;
 }
 
 const freinds: IFriends = ["A", "B", "C"];
+
+interface IList {
+  name: string;
+  weight: string;
+}
+
+interface IFull extends IList {
+  price: number;
+}
+
+const BazarList: IFull = {
+  name: "alu",
+  weight: "e",
+  price: 3,
+};

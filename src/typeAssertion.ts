@@ -1,9 +1,14 @@
+// type assertion or narrowing
+//real world problem
+
 let anything: any;
 
 anything = "Mezba";
 
+// (anything as number).
+
 const kgToGMConverter = (
-  input: string | number
+  input: string | number,
 ): string | number | undefined => {
   if (typeof input === "number") {
     return input * 1000;
@@ -20,6 +25,8 @@ console.log({ result1 });
 const result2 = kgToGMConverter("2 kg") as string;
 
 console.log({ result2 });
+
+// this is important explore this
 
 type CustomError = {
   meesage: string;

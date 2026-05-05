@@ -26,6 +26,8 @@ const createArrayWithTuple = (param1: string, param2: string) => [
   param2,
 ];
 
+// generic na kore normal function likhlei tho hoye jai naki ??tao keno user korchi ??
+
 const createArrayTupleWithGeneric = <X, Y>(param1: X, param2: Y) => [
   param1,
   param2,
@@ -58,3 +60,9 @@ const student2 = {
 
 const result = addStudentToCourse(student2);
 console.log(result);
+
+// console.log(...student2)
+
+const sum = <X, Y>(paramas1: X, params2: Y) => {
+  [paramas1, params2];
+};

@@ -1,0 +1,23 @@
+1.type assertion
+
+2.type interface
+
+3.generic.ts
+
+4.generic with interface 
+
+5.generic with function
+
+6.constarint.ts 
+
+7.key of constraints 
+
+9.enum
+
+10.asconst.ts (eita abar dhekthe hobe bal 9 video)
+
+11.conditional.ts   (10 eitao kichu buji nai )
+
+12.mapped.ts 11
+
+13.Utility type 

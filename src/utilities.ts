@@ -25,6 +25,7 @@ const product: ProductWithColor = {
 type OptionProduct = Partial<Product>;
 type ProductReadonly = Readonly<Product>;
 
+// empty object er jonno type safety
 const emptyObj: Record<string, unknown> = {};
 
 const product1 = {

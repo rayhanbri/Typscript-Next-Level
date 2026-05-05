@@ -1,3 +1,5 @@
+// eta ektu beshi practice korbo
+
 interface Developer<T, X = null> {
   name: string;
   salary: number;
