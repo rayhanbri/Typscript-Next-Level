@@ -31,21 +31,20 @@ console :- node ./src/Nonprimitive.
 
 Primitive.ts 
 1.primitive and non-primitive data type  javascript and typscript . 
-
 Nonprimitive.ts
 
 
 
-function.ts
+2.function.ts
 
-spread and rest.ts 
+3.spread and rest.ts 
 
-destructuring 
+4.destructuring 
 
-typeAlias
+5.typeAlias
 
-union types 
+6.union types 
 
-question mark.ts 
+7.question mark.ts 
 
-nullibable 
+8.nullibable 
