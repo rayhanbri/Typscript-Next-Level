@@ -1,0 +1,235 @@
+# What is NVM?
+
+Node Version Manager (NVM) is a tool used to install and manage multiple versions of Node.js on the same computer.
+
+---
+
+# Why Do We Use NVM?
+
+Different projects may require different Node.js versions.
+
+Example:
+
+* Project A uses Node.js 18
+* Project B uses Node.js 22
+
+Without NVM, managing these versions becomes difficult.
+
+NVM allows you to:
+
+* install multiple Node versions
+* switch versions easily
+* avoid compatibility problems
+
+---
+
+# Real Problem Without NVM
+
+Suppose you install the latest Node.js globally.
+
+Now an old project stops working because it only supports Node.js 16.
+
+Without NVM:
+
+* you must uninstall Node
+* install another version manually
+* repeat again for different projects
+
+This is messy and time-consuming.
+
+---
+
+# How NVM Helps
+
+With NVM:
+
+```bash id="q8s5f1"
+nvm install 18
+nvm install 22
+```
+
+Switch anytime:
+
+```bash id="o2u8z3"
+nvm use 18
+```
+
+or
+
+```bash id="u1p9e7"
+nvm use 22
+```
+
+Very simple.
+
+---
+
+# Importance of NVM
+
+## 1. Manage Multiple Node Versions
+
+Main reason.
+
+You can keep many Node.js versions together.
+
+---
+
+## 2. Project Compatibility
+
+Some packages only work with specific Node versions.
+
+NVM helps run projects safely without breaking them.
+
+---
+
+## 3. Easy Testing
+
+Developers often test apps in different Node versions.
+
+Example:
+
+* test in Node 18
+* test in Node 20
+* test in Node 22
+
+NVM makes this easy.
+
+---
+
+## 4. Cleaner Development Environment
+
+No need to:
+
+* manually uninstall Node
+* reinstall repeatedly
+* change system settings
+
+---
+
+## 5. Useful for Teams
+
+In team projects, everyone can use the same Node version.
+
+Example:
+
+```bash id="ecy5cf"
+nvm use 20
+```
+
+Now all developers work in the same environment.
+
+---
+
+# Common Commands
+
+## Install NVM
+
+Official project:
+
+[NVM GitHub Repository](https://github.com/nvm-sh/nvm?utm_source=chatgpt.com)
+
+---
+
+## Check Installed Versions
+
+```bash id="nsvs0f"
+nvm ls
+```
+
+---
+
+## Install New Version
+
+```bash id="04h8l2"
+nvm install 20
+```
+
+---
+
+## Use Specific Version
+
+```bash id="0v2f3e"
+nvm use 20
+```
+
+---
+
+## Check Current Version
+
+```bash id="ep1c0n"
+node -v
+```
+
+---
+
+# Interview Questions
+
+## Q: What is NVM?
+
+**Answer:**
+NVM is a tool used to install and manage multiple Node.js versions.
+
+---
+
+## Q: Why is NVM important?
+
+**Answer:**
+It helps developers switch between different Node.js versions for different projects.
+
+---
+
+## Q: Can multiple Node versions exist together using NVM?
+
+**Answer:**
+Yes. That is the main feature of NVM.
+
+---
+
+# Real-World Example
+
+You work on:
+
+* an old MERN project using Node 16
+* a new project using Node 22
+
+Instead of reinstalling Node repeatedly:
+
+```bash id="j5p9dm"
+nvm use 16
+```
+
+Later:
+
+```bash id="1dk8za"
+nvm use 22
+```
+
+Done.
+
+---
+
+# Common Mistake
+
+## Mistake:
+
+Installing Node globally without version management.
+
+Problem:
+Older projects may stop working.
+
+Better solution:
+Use NVM from the beginning.
+
+---
+
+# Final Summary
+
+We use NVM because it:
+
+* manages multiple Node.js versions
+* solves compatibility issues
+* helps in team projects
+* simplifies development
+* makes switching Node versions easy
+
+It is one of the most important tools for Node.js developers.

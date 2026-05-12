@@ -124,6 +124,8 @@ const add: AddFunc = (num1, num2) => num1 + num2;
 
 // ### Q4: Primitive type alias
 
+// Union types
+
 // ```ts
 // type ID = string | number;
 
@@ -159,23 +161,23 @@ const add: AddFunc = (num1, num2) => num1 + num2;
 // ### Q7: Union & Intersection
 
 // ```ts
-// type Admin = {
-//   role: "admin";
-// };
+type Admin = {
+  role: "admin";
+};
 
-// type User = {
-//   name: string;
-// };
+type User9 = {
+  name: string;
+};
 
 // // Intersection
-// type AdminUser = Admin & User;
+type AdminUser = Admin & User9;
 
-// const admin: AdminUser = {
-//   name: "Rayhan",
-//   role: "admin",
-// };
+const admin: AdminUser = {
+  name: "Rayhan",
+  role: "admin",
+};
 
-// console.log(admin);
+console.log(admin);
 // ```
 
 // ---
@@ -185,16 +187,16 @@ const add: AddFunc = (num1, num2) => num1 + num2;
 // ### Example 1 (Frontend)
 
 // ```ts
-// type Props = {
-//   title: string;
-//   price: number;
-// };
+type Props = {
+  title: string;
+  price: number;
+};
 
-// function Card({ title, price }: Props) {
-//   console.log(title, price);
-// }
+function Card({ title, price }: Props) {
+  console.log(title, price);
+}
 
-// Card({ title: "Flat", price: 1000 });
+Card({ title: "Flat", price: 1000 });
 // ```
 
 // ---
@@ -202,19 +204,19 @@ const add: AddFunc = (num1, num2) => num1 + num2;
 // ### Example 2 (Backend - Your MERN Project 💡)
 
 // ```ts
-// type Property = {
-//   title: string;
-//   price: number;
-//   location: string;
-// };
+type Property = {
+  title: string;
+  price: number;
+  location: string;
+};
 
-// const property1: Property = {
-//   title: "Apartment",
-//   price: 5000,
-//   location: "Dhaka",
-// };
+const property1: Property = {
+  title: "Apartment",
+  price: 5000,
+  location: "Dhaka",
+};
 
-// console.log(property1);
+console.log(property1);
 // ```
 
 // ---
@@ -231,8 +233,8 @@ const add: AddFunc = (num1, num2) => num1 + num2;
 // ❌ Trying to redeclare type
 
 // ```ts
-// type User = { name: string };
-// // type User = { age: number }; ❌ error
+type User6 = { name: string };
+type User5 = { age: number }; // ❌ error
 // ```
 
 // ---
@@ -251,43 +253,43 @@ const add: AddFunc = (num1, num2) => num1 + num2;
 // // typeAlias.ts
 
 // // Object type
-// type User = {
-//   name: string;
-//   age: number;
-// };
+type User2 = {
+  name: string;
+  age: number;
+};
 
-// const user1: User = {
-//   name: "Rayhan",
-//   age: 25,
-// };
-// console.log(user1);
+const user4: User2 = {
+  name: "Rayhan",
+  age: 25,
+};
+console.log(user1);
 
 // // Primitive union
-// type ID = string | number;
+type ID = string | number;
 
-// const id1: ID = 101;
-// console.log(id1);
+const id1: ID = 101;
+console.log(id1);
 
 // // Function type
-// type Multiply = (a: number, b: number) => number;
+type Multiply = (a: number, b: number) => number;
 
-// const multiply: Multiply = (a, b) => a * b;
-// console.log(multiply(3, 4));
+const multiply: Multiply = (a, b) => a * b;
+console.log(multiply(3, 4));
 
 // // Array type
-// type StringArray = string[];
+type StringArray = string[];
 
-// const names: StringArray = ["A", "B", "C"];
-// console.log(names);
+const names: StringArray = ["A", "B", "C"];
+console.log(names);
 
 // // Intersection
-// type A = { a: number };
-// type B = { b: number };
+type A = { a: number };
+type B = { b: number };
 
-// type AB = A & B;
+type AB = A & B;
 
-// const obj: AB = { a: 1, b: 2 };
-// console.log(obj);
+const obj: AB = { a: 1, b: 2 };
+console.log(obj);
 // ```
 
 // ---

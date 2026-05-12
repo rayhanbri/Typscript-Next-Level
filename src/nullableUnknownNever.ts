@@ -80,11 +80,11 @@ throwError("Error...");
 // ## 3. Real Example
 
 // ```ts id="k4n8q2"
-// let user: string | null = null;
+let user: string | null = null;
 
-// user = "Rayhan";
+user = "Rayhan";
 
-// console.log(user);
+console.log(user);
 // ```
 
 // ---
@@ -121,8 +121,8 @@ throwError("Error...");
 // ### Q3: Example of nullable type
 
 // ```ts id="b6v1x9"
-// let data: string | null = null;
-// data = "Hello";
+let data: string | null = null;
+data = "Hello";
 // ```
 
 // ---
@@ -141,15 +141,15 @@ throwError("Error...");
 // ### API response handling
 
 // ```ts id="f8r3z2"
-// type User = {
-//   name: string;
-//   email: string | null;
-// };
+type User = {
+  name: string;
+  email: string | null;
+};
 
-// const user: User = {
-//   name: "Rayhan",
-//   email: null,
-// };
+const user3: User = {
+  name: "Rayhan",
+  email: null,
+};
 // ```
 
 // ---
@@ -157,7 +157,7 @@ throwError("Error...");
 // ### DOM / frontend example
 
 // ```ts id="q7t1w5"
-// const inputValue: string | null = null;
+const inputValue: string | null = null;
 // ```
 
 // ---
@@ -171,7 +171,8 @@ throwError("Error...");
 // ```ts id="m3k9p2"
 // let user: string | null = null;
 
-// console.log(user.length); // ❌ error
+// console.log(user.length);
+// // ❌ error
 // ```
 
 // ---

@@ -1,4 +1,4 @@
-1.what is typscript and why we use it. 
+1.what is typscript.txt
 
 2. Node Version Manager Install package 
 3.why we use nvm 
@@ -10,12 +10,12 @@ How to install it nvm -
 3. install nvm 
 4.nvm install 24.11.0 (nvm all command )
 5.nvm ls 
-6.nvm user version name
+6.nvm use version name
 7.node -v 
 
 
 ----------
-1.read typscript node.js typscirpt 
+1.read typscript // node.js typscirpt 
 
 install typscript ---
 1.npm install typscirpt

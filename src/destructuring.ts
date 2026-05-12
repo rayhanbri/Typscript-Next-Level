@@ -145,18 +145,18 @@ const [, , B] = friends;
 // ### Q7: Nested destructuring (IMPORTANT 🔥)
 
 // ```ts
-// const user = {
-//   name: "Rayhan",
-//   address: {
-//     city: "Chattogram",
-//   },
-// };
+const user2 = {
+  name: "Rayhan",
+  address: {
+    city: "Chattogram",
+  },
+};
 
-// const {
-//   address: { city },
-// } = user;
+const {
+  address: { city },
+} = user2;
 
-// console.log(city);
+console.log(city);
 // ```
 
 // ---
@@ -226,7 +226,7 @@ const [, , B] = friends;
 // ✅ Fix:
 
 // ```ts
-// const { address } = user || {};
+const { address2 } = user || {};
 // ```
 
 // ---

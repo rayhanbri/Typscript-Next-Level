@@ -56,7 +56,7 @@ const postalCode = user?.address?.postalcode;
 // # 1. Simple Explanation
 
 // ```ts
-// userTheme ?? "light theme";
+userTheme ?? "light theme";
 // ```
 
 // 👉 Meaning:
@@ -69,17 +69,17 @@ const postalCode = user?.address?.postalcode;
 // # 2. How it Works
 
 // ```ts
-// const theme = userTheme ?? "light theme";
+const theme2 = userTheme ?? "light theme";
 // ```
 
 // 👉 Equivalent logic:
 
 // ```ts
-// if (userTheme === null || userTheme === undefined) {
-//   theme = "light theme";
-// } else {
-//   theme = userTheme;
-// }
+if (userTheme === null || userTheme === undefined) {
+  theme2 = "light theme";
+} else {
+  theme2 = userTheme;
+}
 // ```
 
 // ---
@@ -113,11 +113,11 @@ const postalCode = user?.address?.postalcode;
 // ### Q2: Difference between `??` and `||` (VERY IMPORTANT 🔥)
 
 // ```ts
-// const value1 = "" || "default";
-// console.log(value1); // "default" ❌
+const value1 = "" || "default";
+console.log(value1); // "default" ❌
 
-// const value2 = "" ?? "default";
-// console.log(value2); // "" ✅
+const value2 = "" ?? "default";
+console.log(value2); // "" ✅
 // ```
 
 // 👉 `||` treats empty string as false
@@ -130,10 +130,10 @@ const postalCode = user?.address?.postalcode;
 // ### Example (Theme handling 💡)
 
 // ```ts
-// const userTheme = "";
-// const theme = userTheme ?? "light";
+const userTheme4 = "";
+const theme = userTheme4 ?? "light";
 
-// console.log(theme); // "" (user preference kept)
+console.log(theme); // "" (user preference kept)
 // ```
 
 // ---
@@ -141,7 +141,7 @@ const postalCode = user?.address?.postalcode;
 // ### Backend Example (Your Project)
 
 // ```ts
-// const price = req.body.price ?? 0;
+const price = req.body.price ?? 0;
 // ```
 
 // 👉 If price missing → default 0
@@ -155,7 +155,8 @@ const postalCode = user?.address?.postalcode;
 // ❌ Using `||` when you actually need `??`
 
 // ```ts
-// const count = 0 || 10; // 10 ❌ wrong
+const count = 0 || 10;
+// // 10 ❌ wrong
 // ```
 
 // ---
@@ -163,7 +164,8 @@ const postalCode = user?.address?.postalcode;
 // ✅ Correct:
 
 // ```ts
-// const count = 0 ?? 10; // 0 ✅
+const count4 = 0 ?? 10;
+//  // 0 ✅
 // ```
 
 // ---
@@ -171,11 +173,12 @@ const postalCode = user?.address?.postalcode;
 // # 7. Quick Practice
 
 // ```ts
-// const userTheme = null;
+const userTheme5 = null;
 
-// const theme = userTheme ?? "light theme";
+const theme4 = userTheme ?? "light theme";
 
-// console.log(theme); // light theme
+console.log(theme); 
+// // light theme
 // ```
 
 // ---

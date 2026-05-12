@@ -32,14 +32,10 @@ const chowdhury: EmployeeManager = {
   id: "123",
   phoneNO: "012",
   description: "heelo",
-  teamSize:2
-
+  teamSize: 2,
 };
 
-
 // -------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 
 // Alright, let’s break **Union Types in TypeScript** in your interview mentor format 👇
 
@@ -90,13 +86,13 @@ const chowdhury: EmployeeManager = {
 // ### Q2: Basic example
 
 // ```ts
-// let value: string | number;
+let value: string | number;
 
-// value = "Hello";
-// console.log(value);
+value = "Hello";
+console.log(value);
 
-// value = 100;
-// console.log(value);
+value = 100;
+console.log(value);
 // ```
 
 // ---
@@ -104,12 +100,12 @@ const chowdhury: EmployeeManager = {
 // ### Q3: Union with function (IMPORTANT 🔥)
 
 // ```ts
-// function printId(id: string | number) {
-//   console.log(id);
-// }
+function printId(id: string | number) {
+  console.log(id);
+}
 
-// printId("abc");
-// printId(123);
+printId("abc");
+printId(123);
 // ```
 
 // ---
@@ -117,9 +113,9 @@ const chowdhury: EmployeeManager = {
 // ### Q4: Problem without narrowing ⚠️
 
 // ```ts
-// function printLength(value: string | number) {
-//   // console.log(value.length); ❌ error
-// }
+function printLength(value: string | number) {
+  console.log(value.length); //❌ error
+}
 // ```
 
 // 👉 TypeScript doesn’t know if it's string or number.
@@ -129,16 +125,16 @@ const chowdhury: EmployeeManager = {
 // ### Q5: Type narrowing (VERY IMPORTANT 🔥)
 
 // ```ts
-// function printLength(value: string | number) {
-//   if (typeof value === "string") {
-//     console.log(value.length);
-//   } else {
-//     console.log(value.toFixed(2));
-//   }
-// }
+function printLength(value: string | number) {
+  if (typeof value === "string") {
+    console.log(value.length);
+  } else {
+    console.log(value.toFixed(2));
+  }
+}
 
-// printLength("Rayhan");
-// printLength(10);
+printLength("Rayhan");
+printLength(10);
 // ```
 
 // ---
@@ -146,7 +142,7 @@ const chowdhury: EmployeeManager = {
 // ### Q6: Union with literal types
 
 // ```ts
-// type Status = "success" | "error" | "loading";
+type Status = "success" | "error" | "loading";
 
 // let state: Status;
 
@@ -158,15 +154,15 @@ const chowdhury: EmployeeManager = {
 // ### Q7: Union with objects
 
 // ```ts
-// type Admin = { role: "admin"; access: boolean };
-// type User = { role: "user"; name: string };
+type Admin = { role: "admin"; access: boolean };
+type User = { role: "user"; name: string };
 
-// type Person = Admin | User;
+type Person = Admin | User;
 
-// const p1: Person = { role: "admin", access: true };
-// const p2: Person = { role: "user", name: "Rayhan" };
+const p1: Person = { role: "admin", access: true };
+const p2: Person = { role: "user", name: "Rayhan" };
 
-// console.log(p1, p2);
+console.log(p1, p2);
 // ```
 
 // ---
@@ -176,13 +172,13 @@ const chowdhury: EmployeeManager = {
 // ### Example 1 (API response 💡)
 
 // ```ts
-// type ApiResponse = "success" | "error";
+type ApiResponse = "success" | "error";
 
-// function handleResponse(status: ApiResponse) {
-//   console.log(status);
-// }
+function handleResponse(status: ApiResponse) {
+  console.log(status);
+}
 
-// handleResponse("success");
+handleResponse("success");
 // ```
 
 // ---
@@ -190,10 +186,10 @@ const chowdhury: EmployeeManager = {
 // ### Example 2 (Your MERN Project)
 
 // ```ts
-// type Role = "admin" | "agent" | "user";
+type Role = "admin" | "agent" | "user";
 
-// const role: Role = "admin";
-// console.log(role);
+const role: Role = "admin";
+console.log(role);
 // ```
 
 // ---
@@ -248,28 +244,28 @@ const chowdhury: EmployeeManager = {
 // console.log(id);
 
 // // Function with union
-// function show(value: string | number): void {
-//   console.log(value);
-// }
-// show("Hello");
-// show(50);
+function show(value: string | number): void {
+  console.log(value);
+}
+show("Hello");
+show(50);
 
 // // Type narrowing
-// function process(value: string | number) {
-//   if (typeof value === "string") {
-//     console.log(value.toUpperCase());
-//   } else {
-//     console.log(value.toFixed(2));
-//   }
-// }
-// process("rayhan");
-// process(10);
+function process(value: string | number) {
+  if (typeof value === "string") {
+    console.log(value.toUpperCase());
+  } else {
+    console.log(value.toFixed(2));
+  }
+}
+process("rayhan");
+process(10);
 
 // // Literal union
-// type Role = "admin" | "agent" | "user";
+type Role = "admin" | "agent" | "user";
 
-// const userRole: Role = "admin";
-// console.log(userRole);
+const userRole: Role = "admin";
+console.log(userRole);
 // ```
 
 // ---
@@ -290,4 +286,3 @@ const chowdhury: EmployeeManager = {
 // * real API response handling pattern
 
 // Just tell me 👍
-
