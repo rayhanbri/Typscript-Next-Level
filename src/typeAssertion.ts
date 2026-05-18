@@ -41,18 +41,7 @@ try {
 
 // ## 1. Simple Explanation
 
-// **Type Assertion** and **Type Narrowing** are used in **TypeScript** to deal with variable types safely.
-
-// * **Type Assertion** = *You tell TypeScript what the type is* (even if it’s unsure).
-// * **Type Narrowing** = *TypeScript automatically figures out the more specific type* based on conditions.
-
-// 👉 Think like this:
-
-// * Assertion = “Trust me, I know the type.”
-// * Narrowing = “Let me check and figure out the type safely.”
-
 // ---
-
 // ## 2. Key Concepts
 
 // * TypeScript

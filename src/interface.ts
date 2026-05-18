@@ -75,14 +75,10 @@ const BazarList: IFull = {
   price: 3,
 };
 
-
---------------------------------------------------
+// --------------------------------------------------
 // ## 1. Simple Explanation
 
 // Both **`interface`** and **`type` (type alias)** are used in **TypeScript** to define the shape of data (objects, functions, etc.).
-
-// * **Interface** → mainly used to define object structure
-// * **Type Alias** → more flexible, can define objects, unions, primitives, functions, etc.
 
 // 👉 Simple idea:
 
@@ -134,7 +130,7 @@ const BazarList: IFull = {
 
 // * Interface → `extends`
 // * Type → `&` (intersection)
- 
+
 // ---
 
 // ### Q5: Which one should you use?
@@ -151,12 +147,12 @@ const BazarList: IFull = {
 // ### 🔹 Interface Example
 
 // ```ts
-interface IUserr{
+interface IUserr {
   name: string;
   age: number;
 }
 
-function printUser(user: Userr) {
+function printUser(user: IUser) {
   console.log(`${user.name} is ${user.age} years old`);
 }
 
@@ -315,4 +311,3 @@ processInput(123);
 // ---
 
 // If you want, I can give you **tricky interview scenarios (real project-based)** like when `type` fails but `interface` works (and vice versa).
-

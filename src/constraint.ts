@@ -51,7 +51,6 @@ myBro({ isGood: true, name: "rayhan", role: 1 });
 // You use the keyword **`extends`**.
 
 // 👉 Think:
-// “Generic is flexible, but constraint puts rules on it”
 
 // ---
 
@@ -71,7 +70,7 @@ myBro({ isGood: true, name: "rayhan", role: 1 });
 // ### Q1: What are generic constraints?
 
 // **Answer:**
-// They restrict the types a generic can accept using `extends`.
+// // “Generic is flexible, but constraint puts rules on it”
 
 // ---
 
@@ -108,13 +107,13 @@ myBro({ isGood: true, name: "rayhan", role: 1 });
 // ### 🔹 Basic Constraint Example
 
 // ```ts id="c1x9zr"
-// function getLength<T extends { length: number }>(item: T): number {
-//   return item.length;
-// }
+function getLength<T extends { length: number }>(item: T): number {
+  return item.length;
+}
 
 // // function calls
-// console.log(getLength("Hello"));     // string has length
-// console.log(getLength([1, 2, 3]));  // array has length
+console.log(getLength("Hello")); // string has length
+console.log(getLength([1, 2, 3])); // array has length
 // ```
 
 // 👉 Works because both have `length`
@@ -124,16 +123,16 @@ myBro({ isGood: true, name: "rayhan", role: 1 });
 // ### 🔹 Using Interface as Constraint
 
 // ```ts id="p4k8lm"
-// interface User {
-//   name: string;
-// }
+interface User {
+  name: string;
+}
 
-// function printName<T extends User>(user: T) {
-//   console.log(user.name);
-// }
+function printName<T extends User>(user: T) {
+  console.log(user.name);
+}
 
 // // function call
-// printName({ name: "Rayhan", age: 25 });
+printName({ name: "Rayhan", age: 25 });
 // ```
 
 // 👉 Extra properties allowed, but `name` is required
@@ -143,14 +142,14 @@ myBro({ isGood: true, name: "rayhan", role: 1 });
 // ### 🔹 `keyof` Constraint (Important)
 
 // ```ts id="z7w3yt"
-// function getProperty<T, K extends keyof T>(obj: T, key: K) {
-//   return obj[key];
-// }
+function getProperty<T, K extends keyof T>(obj: T, key: K) {
+  return obj[key];
+}
 
 // // function call
-// const user = { name: "Rayhan", age: 25 };
+const user = { name: "Rayhan", age: 25 };
 
-// console.log(getProperty(user, "name"));
+console.log(getProperty(user, "name"));
 // ```
 
 // 👉 Prevents invalid keys
@@ -160,14 +159,14 @@ myBro({ isGood: true, name: "rayhan", role: 1 });
 // ### 🔹 Without Constraint (Problem)
 
 // ```ts id="b2m6qa"
-// function getLengthBad<T>(item: T): number {
-//   // ❌ Error: TypeScript doesn't know if length exists
-//   // return item.length;
-//   return 0;
-// }
+function getLengthBad<T>(item: T): number {
+  // ❌ Error: TypeScript doesn't know if length exists
+  // return item.length;
+  return 0;
+}
 
 // // function call
-// console.log(getLengthBad(123));
+console.log(getLengthBad(123));
 // ```
 
 // 👉 This is why constraints are needed
@@ -179,16 +178,16 @@ myBro({ isGood: true, name: "rayhan", role: 1 });
 // ### Example 1: API Validation
 
 // ```ts id="n5v8ru"
-// interface HasId {
-//   id: number;
-// }
+interface HasId {
+  id: number;
+}
 
-// function processData<T extends HasId>(data: T) {
-//   console.log("ID:", data.id);
-// }
+function processData<T extends HasId>(data: T) {
+  console.log("ID:", data.id);
+}
 
 // // function call
-// processData({ id: 1, name: "Product" });
+processData({ id: 1, name: "Product" });
 // ```
 
 // 👉 Ensures every object has an `id`
@@ -198,14 +197,14 @@ myBro({ isGood: true, name: "rayhan", role: 1 });
 // ### Example 2: Safe Object Access
 
 // ```ts id="x3d9kp"
-// function safeAccess<T, K extends keyof T>(obj: T, key: K) {
-//   return obj[key];
-// }
+function safeAccess<T, K extends keyof T>(obj: T, key: K) {
+  return obj[key];
+}
 
 // // function call
-// const product = { title: "Book", price: 100 };
+const product = { title: "Book", price: 100 };
 
-// console.log(safeAccess(product, "price"));
+console.log(safeAccess(product, "price"));
 // ```
 
 // 👉 Prevents accessing wrong keys

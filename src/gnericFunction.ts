@@ -134,13 +134,13 @@ const sum = <X, Y>(paramas1: X, params2: Y) => {
 // ### 🔹 Basic Generic Function
 
 // ```ts id="g1n3rf"
-// function identity<T>(value: T): T {
-//   return value;
-// }
+function identity<T>(value: T): T {
+  return value;
+}
 
 // // function calls
-// console.log(identity<string>("Hello"));
-// console.log(identity<number>(123));
+console.log(identity<string>("Hello"));
+console.log(identity<number>(123));
 // ```
 
 // ---
@@ -148,13 +148,13 @@ const sum = <X, Y>(paramas1: X, params2: Y) => {
 // ### 🔹 Type Inference (No need to pass `<T>`)
 
 // ```ts id="k82paz"
-// function identity<T>(value: T): T {
-//   return value;
-// }
+function identity<T>(value: T): T {
+  return value;
+}
 
 // // function calls
-// console.log(identity("Auto Detect"));
-// console.log(identity(999));
+console.log(identity("Auto Detect"));
+console.log(identity(999));
 // ```
 
 // ---
@@ -162,12 +162,12 @@ const sum = <X, Y>(paramas1: X, params2: Y) => {
 // ### 🔹 Multiple Generics
 
 // ```ts id="r8t4bx"
-// function combine<T, U>(a: T, b: U) {
-//   return { a, b };
-// }
+function combine<T, U>(a: T, b: U) {
+  return { a, b };
+}
 
 // // function call
-// console.log(combine<string, number>("Age", 25));
+console.log(combine<string, number>("Age", 25));
 // ```
 
 // ---
@@ -175,13 +175,13 @@ const sum = <X, Y>(paramas1: X, params2: Y) => {
 // ### 🔹 Generic with Constraint
 
 // ```ts id="m5q2we"
-// function getLength<T extends { length: number }>(item: T): number {
-//   return item.length;
-// }
+function getLength<T extends { length: number }>(item: T): number {
+  return item.length;
+}
 
 // // function calls
-// console.log(getLength("Hello"));
-// console.log(getLength([1, 2, 3]));
+console.log(getLength("Hello"));
+console.log(getLength([1, 2, 3]));
 // ```
 
 // ---
@@ -189,13 +189,13 @@ const sum = <X, Y>(paramas1: X, params2: Y) => {
 // ### 🔹 Generic Function with Array
 
 // ```ts id="v7c1ds"
-// function getFirst<T>(arr: T[]): T {
-//   return arr[0];
-// }
+function getFirst<T>(arr: T[]): T {
+  return arr[0];
+}
 
 // // function calls
-// console.log(getFirst<number>([10, 20, 30]));
-// console.log(getFirst<string>(["a", "b", "c"]));
+console.log(getFirst<number>([10, 20, 30]));
+console.log(getFirst<string>(["a", "b", "c"]));
 // ```
 
 // ---
@@ -205,13 +205,13 @@ const sum = <X, Y>(paramas1: X, params2: Y) => {
 // ### Example 1: API Response Handler
 
 // ```ts id="q2x8mn"
-// function handleApi<T>(data: T): T {
-//   return data;
-// }
+function handleApi<T>(data: T): T {
+  return data;
+}
 
 // // function call
-// const user = handleApi<{ name: string }>({ name: "Rayhan" });
-// console.log(user);
+const user = handleApi<{ name: string }>({ name: "Rayhan" });
+console.log(user);
 // ```
 
 // 👉 Same function works for any API response
@@ -221,13 +221,13 @@ const sum = <X, Y>(paramas1: X, params2: Y) => {
 // ### Example 2: Reusable Utility Function
 
 // ```ts id="y5k8pl"
-// function wrapInArray<T>(value: T): T[] {
-//   return [value];
-// }
+function wrapInArray<T>(value: T): T[] {
+  return [value];
+}
 
 // // function calls
-// console.log(wrapInArray(5));
-// console.log(wrapInArray("hello"));
+console.log(wrapInArray(5));
+console.log(wrapInArray("hello"));
 // ```
 
 // 👉 Used in many real projects
@@ -264,12 +264,12 @@ const sum = <X, Y>(paramas1: X, params2: Y) => {
 // 👉 Backend example (like your Node/Express project):
 
 // ```ts id="t4h9uz"
-// function createResponse<T>(data: T, success: boolean) {
-//   return { data, success };
-// }
+function createResponse<T>(data: T, success: boolean) {
+  return { data, success };
+}
 
 // // function call
-// console.log(createResponse({ id: 1, name: "Property" }, true));
+console.log(createResponse({ id: 1, name: "Property" }, true));
 // ```
 
 // 👉 Useful for:

@@ -131,17 +131,17 @@ add(2);
 // ### 🔹 Basic Generic Interface
 
 // ```ts
-// interface Box<T> {
-//   value: T;
-// }
+interface Box<T> {
+  value: T;
+}
 
-// function printBox<T>(box: Box<T>) {
-//   console.log(box.value);
-// }
+function printBox<T>(box: Box<T>) {
+  console.log(box.value);
+}
 
 // // function calls
-// printBox<string>({ value: "Hello" });
-// printBox<number>({ value: 100 });
+printBox<string>({ value: "Hello" });
+printBox<number>({ value: 100 });
 // ```
 
 // ---
@@ -149,17 +149,17 @@ add(2);
 // ### 🔹 Generic Interface with Multiple Types
 
 // ```ts
-// interface Pair<T, U> {
-//   first: T;
-//   second: U;
-// }
+interface Pair<T, U> {
+  first: T;
+  second: U;
+}
 
-// function printPair<T, U>(pair: Pair<T, U>) {
-//   console.log(pair.first, pair.second);
-// }
+function printPair<T, U>(pair: Pair<T, U>) {
+  console.log(pair.first, pair.second);
+}
 
 // // function call
-// printPair<string, number>({ first: "Age", second: 25 });
+printPair<string, number>({ first: "Age", second: 25 });
 // ```
 
 // ---
@@ -167,21 +167,21 @@ add(2);
 // ### 🔹 Generic Interface with Constraint
 
 // ```ts
-// interface HasLength {
-//   length: number;
-// }
+interface HasLength {
+  length: number;
+}
 
-// interface Data<T extends HasLength> {
-//   item: T;
-// }
+interface Data<T extends HasLength> {
+  item: T;
+}
 
-// function showLength<T extends HasLength>(data: Data<T>) {
-//   console.log(data.item.length);
-// }
+function showLength<T extends HasLength>(data: Data<T>) {
+  console.log(data.item.length);
+}
 
 // // function calls
-// showLength({ item: "Hello" });
-// showLength({ item: [1, 2, 3] });
+showLength({ item: "Hello" });
+showLength({ item: [1, 2, 3] });
 // ```
 
 // ---
@@ -189,20 +189,20 @@ add(2);
 // ### 🔹 Real-Life Style Interface (API Response)
 
 // ```ts
-// interface ApiResponse<T> {
-//   data: T;
-//   success: boolean;
-// }
+interface ApiResponse<T> {
+  data: T;
+  success: boolean;
+}
 
-// function handleResponse<T>(res: ApiResponse<T>) {
-//   console.log(res.data);
-// }
+function handleResponse<T>(res: ApiResponse<T>) {
+  console.log(res.data);
+}
 
 // // function call
-// handleResponse<{ name: string }>({
-//   data: { name: "Rayhan" },
-//   success: true,
-// });
+handleResponse<{ name: string }>({
+  data: { name: "Rayhan" },
+  success: true,
+});
 // ```
 
 // ---
@@ -224,9 +224,9 @@ add(2);
 // 👉 In React:
 
 // ```ts
-// interface Props<T> {
-//   data: T;
-// }
+interface Props<T> {
+  data: T;
+}
 // ```
 
 // Used for dynamic components like tables, lists, etc.
@@ -256,18 +256,18 @@ add(2);
 // 👉 Example: Reusable Table Data
 
 // ```ts
-// interface Table<T> {
-//   rows: T[];
-// }
+interface Table<T> {
+  rows: T[];
+}
 
-// function printTable<T>(table: Table<T>) {
-//   console.log(table.rows);
-// }
+function printTable<T>(table: Table<T>) {
+  console.log(table.rows);
+}
 
 // // function call
-// printTable<{ id: number; name: string }>({
-//   rows: [{ id: 1, name: "Rayhan" }],
-// });
+printTable<{ id: number; name: string }>({
+  rows: [{ id: 1, name: "Rayhan" }],
+});
 // ```
 
 // 👉 One interface → works for any table data
